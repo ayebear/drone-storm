@@ -5,6 +5,7 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
 
 	$scope.cards = [];
+	$scope.addressDisplay = "coordinates";
 
 	$scope.update = function() {
 		var newUrl = mapUrl1 + $scope.address + mapUrl2;
@@ -19,6 +20,7 @@ app.controller('myCtrl', function($scope, $http) {
 					latitude: loc.lat,
 					longitude: loc.lng
 				};
+				$scope.addressDisplay = topResult.formatted_address;
 				$scope.getData($scope.location);
 			}
 		});
@@ -27,6 +29,7 @@ app.controller('myCtrl', function($scope, $http) {
 	$scope.current = function() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition($scope.setPosition);
+			$scope.addressDisplay = "coordinates";
 		}
 	};
 
