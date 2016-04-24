@@ -69,32 +69,45 @@ app.controller('myCtrl', function($scope, $http) {
 		$http.post("http://54.201.123.98:3000/getData", location).success(function(data, status) {
 			$scope.results = data;
 
-			for (var i in data.safety.messages) {
-				$scope.cards.push({
-					title: "Safety Message",
-					description: data.safety.messages[i]
-				});
-			}
-
 			$scope.cards = [
 				{
 					title: "No fly zone check",
-					description: data.noFlyZone
+					description: data.noFlyZone ? "Warning: This is a no-fly zone!" : "You are safe to fly here.",
+					color: data.noFlyZone ? "#E63828" : "#43E12C",
+					icon: data.noFlyZone ? "warning" : "done"
 				},
 				{
 					title: "Weather Summary",
-					description: data.weather.summary
+					description: data.weather.summary,
+					icon: "done"
 				},
 				{
 					title: "Precipitation",
-					description: data.weather.precipitation.probability
+					description: data.weather.precipitation.probability,
+					icon: "done"
 				},
 				{
 					title: "Wind",
-					description: "Direction: " + data.weather.wind.bearing + " degrees, Speed: " + data.weather.wind.speed
+					description: "Direction: " + data.weather.wind.bearing + " deg, Speed: " + data.weather.wind.speed,
+					icon: "done"
 				}
 			];
-			$scope.cards.push()
+
+			for (var i in data.safety.messages) {
+				$scope.cards.push({
+					title: "Safety Message",
+					description: data.safety.messages[i],
+					icon: "info"
+				});
+			}
+
+			// Setup default colors
+			for (var i in $scope.cards) {
+				var color = $scope.cards[i].color;
+				if (!(color in $scope.cards[i])) {
+					$scope.cards[i].color = "#546E7A";
+				}
+			}
 		});
 	}
 });
