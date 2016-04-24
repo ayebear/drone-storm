@@ -67,7 +67,7 @@ app.controller('myCtrl', function($scope, $http) {
 	$scope.getData = function(location) {
 		// var reqData = angular.toJson(location);
 		$http.post("http://54.201.123.98:3000/getData", location).success(function(data, status) {
-			$scope.results = data;
+			$scope.results = JSON.stringify(data, null, 2);
 
 			$scope.cards = [
 				{
