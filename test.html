@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drone Storm</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<h1>Drone Storm</h1>
+
+		<form novalidate>
+			Address:<br>
+			<input type="text" ng-model="address"><br><br>
+			<button ng-click="update()">Update</button>
+			<button ng-click="current()">Use Current Location</button>
+		</form>
+
+		<p>location: {{location}}</p><br>
+		<p>results: {{results}}</p><br>
+	</div>
+	<script type="text/javascript" src="test.js"></script>
+</body>
+</html>
