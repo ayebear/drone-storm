@@ -37,14 +37,14 @@ public class Splash extends ActionBarActivity {
                     new Runnable() {
                         @Override
                         public void run() {
-                            Intent i = new Intent(Splash.this, MainActivity.class);
+                            Intent i = new Intent(Splash.this, MapsActivity.class);
                             startActivity(i);
                             Splash.this.finish();
                         }
                     }
 
 
-                    , 5000
+                    , 2000
             );
         }
     }

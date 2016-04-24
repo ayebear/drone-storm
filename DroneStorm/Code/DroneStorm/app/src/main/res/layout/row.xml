@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather: "
+        android:textSize="20dp"
+        android:id="@+id/weather"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/sample"
+        android:layout_below="@+id/weather"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Day "
+            android:id="@+id/sDay"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@+id/weather"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="intensity: "
+        android:id="@+id/sIntensity"
+       android:layout_toRightOf="@+id/imageView"
+        android:layout_below="@+id/sDay"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sIntensity"
+            android:text="Probability"
+            android:id="@+id/sProbabilit"
+            android:layout_toRightOf="@+id/imageView"/>
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary:  "
+            android:textSize="20dp"
+            android:id="@+id/summary"
+            android:layout_below="@+id/imageView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature: "
+            android:id="@+id/sTemperature"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@+id/summary"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibility: "
+            android:id="@+id/sVisibility"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@+id/sTemperature"
+            android:layout_alignParentLeft="true"
+            />
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="1dp"/>
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind                           "
+            android:textSize="20dp"
+            android:id="@+id/sWind"
+           android:layout_alignParentTop="true"
+          android:layout_alignParentRight="true"
+            android:gravity="bottom"
+
+            />
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bearing:                           "
+            android:id="@+id/sBearing"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/sWind"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speed:                           "
+            android:id="@+id/speed"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/sBearing"
+
+            />
+
+
+</RelativeLayout>
+
+
+</LinearLayout>

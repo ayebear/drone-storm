@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DroneStorm</string>
+    <string name="title_activity_google_maps_api">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
