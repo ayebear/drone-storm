@@ -23,15 +23,24 @@ app.controller('myCtrl', function($scope, $http) {
 	};
 
 	$scope.current = function() {
-
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition($scope.setPosition);
+		}
 	};
+
+	$scope.setPosition = function(position) {
+		$scope.location = {
+			latitude: position.coords.latitude,
+			longitude: position.coords.longitude
+		};
+		console.log($scope.location);
+		$scope.getData($scope.location);
+	}
 
 	$scope.getData = function(location) {
 		// var reqData = angular.toJson(location);
 		$http.post("http://54.201.123.98:3000/getData", location).success(function(data, status) {
 			$scope.results = data;
-		})
+		});
 	}
 });
-
-
