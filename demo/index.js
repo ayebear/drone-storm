@@ -39,31 +39,6 @@ app.controller('myCtrl', function($scope, $http) {
 		$scope.getData($scope.location);
 	}
 
-/*
-{
-    "noFlyZone": true,
-    "safety": {
-        "level": 0,
-        "messages": [
-            "Caution: This location intersects a no-fly zone."
-        ]
-    },
-    "weather": {
-        "icon": "partly-cloudy-night",
-        "precipitation": {
-            "intensity": 0,
-            "probability": 0
-        },
-        "summary": "Mostly Cloudy",
-        "temperature": 47.92,
-        "wind": {
-            "bearing": 239,
-            "speed": 4.55
-        }
-    }
-}
-*/
-
 	$scope.getData = function(location) {
 		// var reqData = angular.toJson(location);
 		$http.post("http://54.201.123.98:3000/getData", location).success(function(data, status) {
