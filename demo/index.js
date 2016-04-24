@@ -83,12 +83,17 @@ app.controller('myCtrl', function($scope, $http) {
 				},
 				{
 					title: "Precipitation",
-					description: data.weather.precipitation.probability,
+					description: (data.weather.precipitation.probability * 100) + "% chance of precipitation.",
 					icon: "done"
 				},
 				{
 					title: "Wind",
 					description: "Direction: " + data.weather.wind.bearing + " deg, Speed: " + data.weather.wind.speed,
+					icon: "done"
+				},
+				{
+					title: "Temperature",
+					description: data.weather.temperature + " degrees F",
 					icon: "done"
 				}
 			];
