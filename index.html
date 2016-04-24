@@ -1,9 +1,319 @@
-<!DOCTYPE html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>Drone Storm</title>
+	<head>
+		<title>Drone Storm</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link rel="shortcut icon" href="images/fav.png" />	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
 </head>
-<body>
+	<body>
+		<!-----start-container----->
+		<!-----header-section------>
+		<div class="header-section">
+			<!----- start-header---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="top-header">
+						<div class="logo">
+							<table style="width:100%">
+							  <tr>
+							    <td><a href="#"><img src="images/logo.png" height="60" width="210" title="logo" /></a></td>
+							    <td><a href="#"><img src="images/dronelogo.png" height="60" width="40" title="logo" /></a></td>		
+							  </tr>
+							</table>							
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a href="#home" class="scroll">Home </a></li>
+								<li class="page-scroll"><a href="#gallery" class="scroll">Gallery</a></li>
+								<li class="page-scroll"><a href="#Team" class="scroll">About </a></li>
+								<li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----- start-slider---->
+			<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			<!-- Slideshow 4 -->
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			          <img src="images/slide.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<h1>Introducing <span>Drone Storm.</span></h1>
+			          		<h2>Enable Drone Operators to know about:</h2>
+			          		<div class="slide-text">
+			          			<ul>
+			          				<li><span> </span>Specific Weather Parameters</li>
+			          				<li><span> </span>Local Terrain</li>
+			          				<li><span> </span>No Fly-Zones Within 5 Miles Radius</li>
+			          			</ul>
+			          		</div>
+			          		<div class="clearfix"> </div>
+			          		<div class="big-btns">
+			          			<a class="download" href="#"><label> </label>Download</a>
+			          			<a class="view" href="#gallery"><label> </label>Vew Gallery</a>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+			         <li>
+			          <img src="images/slide.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<h1>Introducing <span>An Amazing App.</span></h1>
+			          		<h2>Enable Drone Operators to know about:</h2>
+			          		<div class="slide-text">
+			          			<ul>
+			          				<li><span> </span>Specific Weather Parameters</li>
+			          				<li><span> </span>Local Terrain</li>
+			          				<li><span> </span>No Fly-Zones Within 5 Miles Radius</li>
+			          			</ul>
+			          		</div>
+			          		<div class="clearfix"> </div>
+			          		<div class="big-btns">
+			          			<a class="download" href="#"><label> </label>Download</a>
+			          			<a class="view" href="#gallery"><label> </label>Vew Gallery</a>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+			      </ul>
+			    </div>
+			    <div class="clearfix"> </div>
+			    <!-----divice----->
+			    	<div class="divice-demo">
+			    		<img src="images/divice-in-hand.png" title="demo" />
+			    	</div>
+			    <!---//divice----->
+			<!----- //End-slider---->
+			</div>
+			<!-----//header-section----->
+			
+						
+					<!----screen-shot-gallery---->
+					<div id="gallery" class="screen-shot-gallery">
+						<div class="container">
+							<div class="section-head text-center">
+								<h3><span class="frist"> </span>SCREENSHOTS GALLERY<span class="second"> </span></h3>
+								<p>Below are some of the snapshots of the Live Drone Storm Application through different activities.</p>
+							</div>
+						</div>
+						<!----sreen-gallery-cursual---->
+						<div class="sreen-gallery-cursual">
+							 <!-- requried-jsfiles-for owl -->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 3,
+							        lazyLoad : true,
+							        autoPlay : true,
+							      });
+							    });
+							    </script>
+							 <!-- //requried-jsfiles-for owl -->
+							 <!-- start content_slider -->
+							 <div class="container">
+						       <div id="owl-demo" class="owl-carousel">
+					                <div class="item">
+					                	<img class="lazyOwl" data-src="images/screen.jpg" alt="screen-name">
+					                </div>
+					                <div class="item">
+					                	<img class="lazyOwl" data-src="images/screen.jpg" alt="screen-name">
+					                </div>
+					                <div class="item">
+					                	<img class="lazyOwl" data-src="images/screen.jpg" alt="screen-name">
+					                </div>
 
-</body>
+				              </div>
+						</div>
+						<!--//sreen-gallery-cursual---->
+					</div>
+				</div>
+				<!--//screen-shot-gallery---->
+				<!---- show-reel ---->
+				<!---pop-up-box---->
+					
+				<div class="show-reel text-center">
+					
+				</div>
+				<!---- //show-reel ---->
+				<!----team---->
+				
+				<!----//team---->
+				<div class="clearfix"> </div>
+				<!----people-says----->
+					<div id="Team" class="test-monials text-center">
+						<div class="container">
+							<div class="section-head text-center">
+							<h3><span class="frist"> </span>PEOPLE BEHIND THE APP<span class="second"> </span></h3>
+						<script>
+							    $(document).ready(function() {
+							      $("#owl-demo1").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        itemsDesktop : 2,
+							      });
+							    });
+						 </script>
+						<div id="owl-demo1" class="owl-carousel">
+					       <div class="item">
+					          <p>Hamza Saeed is a student of Computer Science at University of Maryland Baltimore County. He is in his senior year of college and is also persuing a minor in Bussiness Administration. His long term education goals include getting a Master's Degree in Bussiness Administration. He is a sincere, loyal and a dedicated worker with lots of ambition. He has extensive experience in software development, web & data management, and software automation. He loves to learn and is alway up for a challenge. He gets along well with team members, while also working effectively on his own.</p>
+					     		<div class="quit-people">
+					     			<img src="images/quit-people.jpg" height="130" width="120" title="name" />
+					     			<h4><a href="#"> Hamza Saeed</a></h4>
+					     			<span>Lead Developer</span>
+					     		</div>
+					       </div>
+					        <div class="item">
+					          <p>Eric Hebert is a Computer Science Student at the University of Maryland Baltimore County. Eric loves to develop native application along with Real Time Strategy Games. Eric is a graduating senior of computer science with lots of ambition and passion in the feild of computing. Eric is a great team player and is always up for a challenge. His past projects include working on RTS games along with an application for DNA scanner and an Application to detect American Sign Language Pattterns. Eric loves to work in teams and also works effectivley on his own.</p>
+					     		<div class="quit-people">
+					     			<img src="images/quit-people.jpg" height="130" width="120" title="name" />
+					     			<h4><a href="#"> Eric Hebert</a></h4>
+					     			<span>Lead Developer</span>
+					     		</div>
+					       </div>
+					        <div class="item">
+					          <p>Eric Hebert is a Computer Science Student at the University of Maryland Baltimore County. Eric loves to develop native application along with Real Time Strategy Games. Eric is a graduating senior of computer science with lots of ambition and passion in the feild of computing. Eric is a great team player and is always up for a challenge. His past projects include working on RTS games along with an application for DNA scanner and an Application to detect American Sign Language Pattterns. Eric loves to work in teams and also works effectivley on his own.</p>
+					     		<div class="quit-people">
+					     			<img src="images/quit-people.jpg" height="130" width="120" title="name" />
+					     			<h4><a href="#"> Nirmesh</a></h4>
+					     			<span>Lead Developer</span>
+					     		</div>
+					       </div>
+				         </div>
+				         </div>
+					</div>
+				<!----//people-says----->
+				<!-----FEATURED----->
+				<div class="featured">
+
+
+			</div>
+			<!-----FEATURED----->
+			<!-----getintouch----->
+			<div id="contact" class="getintouch">
+				<div class="container">
+					<div class="section-head text-center">
+						<h3><span class="frist"> </span>GET IN TOUCH<span class="second"> </span></h3>
+						<p>Please use the contact form below for any questions or comments regarding this project. We would love to hear your opinion! </p>
+					</div>
+					<!---->
+					<div class="col-md-9 getintouch-left">
+						<div class="contact-form col-md-10">
+							<h3>Say hello!</h3>
+							<form name="enq" method="post" action="email/" onsubmit="return validation();">
+
+
+								<input type="text" name="name" id="name" value="" placeholder="Name" required />
+
+								<input type="text" name="email" id="email" value="" placeholder="Email" required />
+
+								<textarea name="message" id="message" value=""placeholder="Message" required /> </textarea>
+
+								<input type="submit" value="Send Message" name="submit" id="submitButton" />
+
+							</form>
+						</div>
+						
+					</div>
+					<div class="col-md-2 getintouch-left">
+						<div class="footer-divice">
+							<img src="images/divice-half.png" title="getintouch" />
+						</div>
+					</div>	
+				</div>
+			</div>
+			<!---//getintouch----->
+			<!-----footer----->
+			<div class="footer">
+				<div class="container">
+					<div class="footer-grids">
+					<center>
+						<p>Drone Storm  | Template from W3Schools
+					</center>
+					</div>
+				</div>
+			</div>
+			<!---//footer----->
+			
+	</body>
 </html>
+
